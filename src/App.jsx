@@ -15,14 +15,14 @@ function App() {
     console.log('progress', ticket);
     const isInprogress = inprogress.find(tkt => tkt.id === ticket.id)
     if (isInprogress) {
-      toast('Ticket is already In Progress')
+      toast.warning('Ticket is already In Progress')
       return;
     }
     const newInProgress = [...inprogress, ticket]
     const modifiedNewInprogress = newInProgress.map(tkt => {
       if (tkt.id === ticket.id) {
         console.log({ ...tkt, status: 'In Progress' })
-        toast('Ticket is now In Progress')
+        toast.info('Ticket is now In Progress')
         return { ...tkt, status: 'In Progress' }
       }
       return tkt;
@@ -52,7 +52,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className="py-10 bg-gray-100">
+      <main className="lg:px-1.5 py-4 lg:py-10 bg-gray-100">
         <ProgressContainer inprogress={inprogress.length} resolved={resolved.length} />
         <TicketsContainer
           tickets={tickets}

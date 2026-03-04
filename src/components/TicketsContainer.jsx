@@ -41,7 +41,7 @@ const TicketsContainer = ({ tickets, inprogress, resolved, handleInprogress, han
                     <div className=" bg-white">
                         {
                             resolved.length !== 0 ? resolved.map(ticket => <div key={ticket.id} className='px-4 py-5 bg-white rounded shadow-lg mb-4'>
-                                <h3 className="font-medium text-xl mb-4 text-gray-800">{ticket.title}</h3>
+                                <h3 className="font-semibold text-xl mb-4 text-gray-800">{ticket.title}</h3>
                                 <p>Ticket Solved</p>
 
                             </div>) : <div className='text-gray-400 text-center py-10'>No resolved tickets yet.</div>
