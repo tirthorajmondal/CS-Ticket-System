@@ -2,7 +2,7 @@ import { FaEnvelope, FaFacebookF, FaInstagram, FaSquareXTwitter } from 'react-ic
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-gray-300 pt-12 pb-4 mt-16">
+        <footer className="bg-gray-900 text-gray-300 pt-12 pb-4">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid  grid-cols-6 gap-8 mb-8">
                     <div className="col-span-6 lg:col-span-2">
