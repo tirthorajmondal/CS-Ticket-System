@@ -23,7 +23,7 @@
         "description": "Customer cannot download their January invoice from the system. The download button is unresponsive.",
         "customer": "Michael Brown",
         "priority": "MEDIUM PRIORITY",
-        "status": "In-Progress",
+        "status": "Open",
         "createdAt": "1/27/2024"
     },
     {
@@ -50,7 +50,7 @@
         "description": "Customer requested a refund two weeks ago but has not received the amount yet.",
         "customer": "Sophia Taylor",
         "priority": "HIGH PRIORITY",
-        "status": "In-Progress",
+        "status": "Open",
         "createdAt": "1/25/2024"
     },
     {
@@ -77,7 +77,7 @@
         "description": "Customer wants to enable auto-renewal for their subscription but the toggle is disabled.",
         "customer": "Liam Thomas",
         "priority": "MEDIUM PRIORITY",
-        "status": "In-Progress",
+        "status": "Open",
         "createdAt": "2/1/2024"
     },
     {
