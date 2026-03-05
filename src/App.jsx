@@ -36,8 +36,8 @@ function App() {
     const decreasedInProgress = inprogress.filter(tkt => tkt.id !== ticket.id)
     setInprogress(decreasedInProgress)
 
-
-
+    const ticketsLeft = tickets.filter(tkt => tkt.id !== ticket.id)
+    setTickets(ticketsLeft)
     const newResolved = [...resolved, ticket]
     setResolved(newResolved)
     toast.success('Ticket is now Resolved')
@@ -63,7 +63,7 @@ function App() {
         />
       </main>
       <Footer />
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
     </>
   )
 }
