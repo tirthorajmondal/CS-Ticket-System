@@ -12,27 +12,27 @@ function App() {
   const [resolved, setResolved] = useState([])
 
   const handleInprogress = (ticket) => {
-    console.log('progress', ticket);
+    // console.log('progress', ticket);
     const isInprogress = inprogress.find(tkt => tkt.id === ticket.id)
     if (isInprogress) {
       toast.warning('Ticket is already In Progress')
       return;
     }
-    const newInProgress = [...inprogress, ticket]
-    const modifiedNewInprogress = newInProgress.map(tkt => {
+
+    // update ticktes state
+    const newTicketsArray = tickets.map(tkt => {
       if (tkt.id === ticket.id) {
-        console.log({ ...tkt, status: 'In Progress' })
-        toast.info('Ticket is now In Progress')
         return { ...tkt, status: 'In Progress' }
       }
       return tkt;
     })
+    setTickets(newTicketsArray);
 
-
-    setInprogress(modifiedNewInprogress)
+    const newInProgress = [...inprogress, { ...ticket, status: 'In Progress' }]
+    setInprogress(newInProgress)
+    toast.info('Ticket is now In Progress')
   }
   const handleResolved = (ticket) => {
-    console.log('resolve', ticket);
     const decreasedInProgress = inprogress.filter(tkt => tkt.id !== ticket.id)
     setInprogress(decreasedInProgress)
 

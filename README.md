@@ -379,9 +379,7 @@ vercel
 npm run build
 # Drag and drop 'dist' folder to Netlify
 ```
-
 ---
-
 
 ## 📧 Support
 

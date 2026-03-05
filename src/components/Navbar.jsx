@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo/Brand */}
-                    <div className="flex items-center gap-2 cursor-pointer">
+                    <div className="flex items-center gap-2 cursor-pointer z-10">
                         <a href='/' className="text-xl font-semibold text-gray-800"><span className=' bg-linear-to-br from-[#54CF68] to-[#00827A] text-white px-3 py-2 rounded-lg'>CS</span> Ticket System</a>
                     </div>
 
@@ -27,7 +27,7 @@ const Navbar = () => {
                     </button>
 
                     <div className="hidden md:flex items-center gap-8">
-                        <ul className="flex gap-6">
+                        <ul className="flex gap-6 text-sm lg:text-base">
                             <li><a href="#home" className="text-gray-700 hover:text-purple-600 transition font-medium">Home</a></li>
                             <li><a href="#faq" className="text-gray-700 hover:text-purple-600 transition font-medium">FAQ</a></li>
                             <li><a href="#changelog" className="text-gray-700 hover:text-purple-600 transition font-medium">Changelog</a></li>
@@ -35,7 +35,7 @@ const Navbar = () => {
                             <li><a href="#download" className="text-gray-700 hover:text-purple-600 transition font-medium">Download</a></li>
                             <li><a href="#contact" className="text-gray-700 hover:text-purple-600 transition font-medium">Contact</a></li>
                         </ul>
-                        <button className="bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition transform hover:-translate-y-0.5">
+                        <button className="bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition transform hover:-translate-y-0.5 text-nowrap">
                             + New Ticket
                         </button>
                     </div>
@@ -43,7 +43,7 @@ const Navbar = () => {
 
                 {/* silding menu by translate */}
                 <div
-                    className={`md:hidden fixed top-[65px] right-0 h-dvh w-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-[600px]'
+                    className={`md:hidden fixed top-[65px] right-0 h-dvh w-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                         }`}
                 >
                     <ul className="flex flex-col gap-0 ">
@@ -79,19 +79,11 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="px-4 mt-4">
-                        <button className="w-full  bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white px-4 py-3 font-semibold hover:shadow-lg transition rounded-lg">
+                        <button className="w-full  bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white px-4 py-3 font-semibold hover:shadow-lg transition rounded-lg text-nowrap">
                             + New Ticket
                         </button>
                     </div>
                 </div>
-
-                {/* Overlay for Mobile Menu */}
-                {isMenuOpen && (
-                    <div
-                        className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-30 top-16"
-                        onClick={toggleMenu}
-                    />
-                )}
             </div>
         </nav>
     );
