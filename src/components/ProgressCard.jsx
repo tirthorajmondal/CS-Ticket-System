@@ -7,14 +7,14 @@ const ProgressCard = ({ title, count }) => {
             : 'bg-linear-to-br from-[#632EE3] to-[#9F62F2]';
 
     return (
-        <div className={`text-white rounded-xl pointer-events-none ${bgClass} aspe`}>
-            <div className="flex  ">
-                <img className="w-1/3" src={bgImage} alt="" />
+        <div className={`text-white rounded-xl  pointer-events-none ${bgClass}`}>
+            <div className="flex h-36 lg:h-48">
+                <div className="min-w-1/3 bg-cover bg-no-repeat" style={{ backgroundImage: `url(${bgImage})` }} />
                 <div className="w-1/3 flex flex-col justify-center items-center py-4 gap-2">
                     <p className="text-xl whitespace-nowrap">{title}</p>
                     <p className="text-4xl font-bold">{count}</p>
                 </div>
-                <img className="w-1/3 transform scale-x-[-1]" src={bgImage} alt="" />
+                <div className="min-w-1/3  bg-cover bg-no-repeat transform scale-x-[-1]" style={{ backgroundImage: `url(${bgImage})` }} />
             </div>
         </div>
     );
