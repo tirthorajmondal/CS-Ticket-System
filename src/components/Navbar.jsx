@@ -13,7 +13,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo/Brand */}
                     <div className="flex items-center gap-2 cursor-pointer">
-                        <a href='/' className="text-xl font-semibold text-gray-900">CS - Ticket System</a>
+                        <a href='/' className="text-xl font-semibold text-gray-800"><span className=' bg-linear-to-br from-[#54CF68] to-[#00827A] text-white px-3 py-2 rounded-lg'>CS</span> Ticket System</a>
                     </div>
 
                     {/* animated hamburger  {something new} */}
@@ -35,7 +35,7 @@ const Navbar = () => {
                             <li><a href="#download" className="text-gray-700 hover:text-purple-600 transition font-medium">Download</a></li>
                             <li><a href="#contact" className="text-gray-700 hover:text-purple-600 transition font-medium">Contact</a></li>
                         </ul>
-                        <button className="bg-linear-to-r from-purple-600 to-purple-700 text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition transform hover:-translate-y-0.5">
+                        <button className="bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition transform hover:-translate-y-0.5">
                             + New Ticket
                         </button>
                     </div>
@@ -79,7 +79,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="px-4 mt-4">
-                        <button className="w-full bg-linear-to-r from-purple-600 to-purple-700 text-white px-4 py-3 font-semibold hover:shadow-lg transition rounded-lg">
+                        <button className="w-full  bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white px-4 py-3 font-semibold hover:shadow-lg transition rounded-lg">
                             + New Ticket
                         </button>
                     </div>

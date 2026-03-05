@@ -13,7 +13,7 @@ const TicketsContainer = ({ tickets, inprogress, resolved, handleInprogress, han
     return (
         <div className="flex flex-col lg:flex-row gap-y-6 max-w-7xl mx-1.5 lg:mx-auto">
             <div className="w-full lg:w-9/12">
-                <h3 className='text-xl font-bold mb-3'>Tickets</h3>
+                <h3 className='text-xl font-bold mb-3'>Customer Tickets</h3>
                 <div className='grid grid-cols-1 lg:grid-cols-2  gap-2 md:gap-4 lg:gap-6'>
                     {
                         tickets && tickets.map(ticket => <TicketCard key={ticket.id} ticket={ticket} onTicketClick={onTicketClick} />)

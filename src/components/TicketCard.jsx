@@ -4,10 +4,9 @@ const TicketCard = ({ ticket, onTicketClick }) => {
     // console.log(ticket);
     return (
         <div
-            className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-all duration-300 cursor-pointer hover:border-purple-300"
+            className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-all duration-300 cursor-pointer "
             onClick={() => onTicketClick && onTicketClick(ticket)}
         >
-            {/* Header: Title and Status */}
             <div className="flex justify-between items-start gap-3 mb-3">
                 <h3 className="text-base font-semibold text-gray-900 flex-1 leading-tight">
                     {ticket.title}
@@ -21,16 +20,17 @@ const TicketCard = ({ ticket, onTicketClick }) => {
                     {ticket.status}
                 </span>
             </div>
-            {/* Description */}
             <p className="text-sm text-gray-600 mb-4 line-clamp-2">
                 {ticket.description}
             </p>
 
-            {/* Footer: ID, Priority, Customer, Date */}
             <div className="space-y-2">
                 <div className="flex items-center justify-between text-xs">
                     <span className="font-semibold text-gray-900">{ticket.id}</span>
-                    <span className={`font-semibold `}>
+                    <span className={`font-semibold p-1.5 rounded-2xl
+                     ${ticket.priority.toLowerCase() === 'low priority' ? 'text-green-600' :
+                            ticket.priority.toLowerCase() === 'medium priority' ? 'text-yellow-600 ' :
+                                ticket.priority.toLowerCase() === 'high priority' ? 'text-red-600' : 'text-gray-600'}`}>
                         {ticket.priority}
                     </span>
                 </div>
